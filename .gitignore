@@ -1,0 +1,40 @@
+# ===== OS =====
+.DS_Store
+Thumbs.db
+
+# ===== IDE =====
+.idea/
+.vscode/
+*.iml
+*.swp
+
+# ===== Secrets / env =====
+.env
+.env.*
+!.env.example
+
+# ===== Go (backend) =====
+backend/bin/
+backend/tmp/
+*.exe
+*.test
+*.out
+coverage.*
+go.work
+go.work.sum
+
+# ===== Local data (Postgres в docker и т.п.) =====
+backend/data/
+*.log
+
+# ===== Android (страховка поверх android/.gitignore) =====
+android/local.properties
+android/.gradle/
+android/build/
+android/app/build/
+android/.kotlin/
+android/captures/
+*.apk
+*.aab
+*.keystore
+*.jks
