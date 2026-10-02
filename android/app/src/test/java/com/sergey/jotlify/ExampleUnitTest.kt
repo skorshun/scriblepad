@@ -1,4 +1,4 @@
-package com.example.scriblpad
+package com.sergey.jotlify
 
 import org.junit.Test
 

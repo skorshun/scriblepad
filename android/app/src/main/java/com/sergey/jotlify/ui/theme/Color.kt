@@ -1,4 +1,4 @@
-package com.example.scriblpad.ui.theme
+package com.sergey.jotlify.ui.theme
 
 import androidx.compose.ui.graphics.Color
 

@@ -22,5 +22,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "ScriblPad"
+rootProject.name = "Jotlify"
 include(":app")
