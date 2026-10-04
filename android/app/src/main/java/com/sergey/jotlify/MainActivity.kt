@@ -1,6 +1,7 @@
 package com.sergey.jotlify
 
 import android.os.Bundle
+import android.util.Log
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
@@ -11,6 +12,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import com.sergey.jotlify.ui.noteslist.NotesListRoute
 import com.sergey.jotlify.ui.theme.JotlifyTheme
 
 class MainActivity : ComponentActivity() {
@@ -19,29 +21,21 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             JotlifyTheme {
-                Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    Greeting(
-                        name = "Android",
-                        modifier = Modifier.padding(innerPadding)
-                    )
-                }
+                NotesListRoute(
+                    // TODO: navigate to the editing screen
+                    onNoteClick = { nodeId ->
+                        Log.d(TAG, "Note clicked: $nodeId")
+                    },
+                    // TODO: navigate to the creation screen
+                    onAddClick = {
+                        Log.d(TAG, "Add note clicked")
+                    }
+                )
             }
         }
     }
-}
 
-@Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(
-        text = "Hello $name!",
-        modifier = modifier
-    )
-}
-
-@Preview(showBackground = true)
-@Composable
-fun GreetingPreview() {
-    JotlifyTheme {
-        Greeting("Android")
+    private companion object {
+        const val TAG = "MainActivity"
     }
 }
