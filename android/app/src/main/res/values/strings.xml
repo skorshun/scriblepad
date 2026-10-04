@@ -1,4 +1,8 @@
 <resources>
     <string name="app_name">Jotlify</string>
     <string name="note_untitled">Untitled</string>
+    <string name="notes_empty">There are no notes yet.\nClick “+” to create your first one.</string>
+    <string name="notes_error">Unable to load notes</string>
+    <string name="action_retry">Retry</string>
+    <string name="action_add_note">Add note</string>
 </resources>
